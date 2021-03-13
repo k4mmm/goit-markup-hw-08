@@ -1,0 +1,23 @@
+.page-header {
+  border-bottom: 1px solid #ececec;
+
+  &--margin {
+    margin-bottom: 94px;
+    border-bottom: 1px solid #ececec;
+  }
+}
+
+.current {
+  color: $activeLink;
+
+  &::after {
+    content: "";
+    border: 2px solid $activeLink;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: $activeLink;
+  }
+}

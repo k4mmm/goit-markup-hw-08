@@ -1,0 +1,123 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $heroFooterBg;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.address__location {
+  color: $whiteColor;
+  margin-top: 0;
+  margin-bottom: 9px;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.info {
+  margin-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.address__mail,
+.address__phone {
+  color: rgba(255, 255, 255, 0.6);
+  display: inline-block;
+
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  margin-bottom: 9px;
+}
+
+.join__title,
+.subscribe__title {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $whiteColor;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.join__list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.join__icon {
+  fill: $whiteColor;
+}
+
+.join__item {
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.join__link {
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: $activeLink;
+  }
+}
+
+/* SUBSCRIBE */
+
+.subscribe__icon {
+  margin-left: 10px;
+}
+
+.subscribe__btn {
+  @extend .button;
+  display: flex;
+  font-style: normal;
+  max-height: 50px;
+  padding: 10px 29px;
+}
+
+.subscribe__input {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: $heroFooterBg;
+  height: 50px;
+  width: 358px;
+  padding: 15px 16px;
+  color: $whiteColor;
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 360px) {
+    width: 100%;
+  }
+}

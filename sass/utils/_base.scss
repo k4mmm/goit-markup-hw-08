@@ -1,0 +1,51 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+a,
+ul {
+  text-decoration: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  min-width: 300px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  color: $mainTextColor;
+  text-align: center;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.17;
+}
+
+p {
+  color: $paragraphText;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

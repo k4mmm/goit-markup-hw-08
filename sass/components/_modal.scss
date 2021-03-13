@@ -1,0 +1,184 @@
+.modal {
+  min-width: 528px;
+  min-height: 581px;
+  background-color: $whiteColor;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__close-btn {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: $whiteColor;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  fill: currentColor;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    fill: $activeLink;
+  }
+}
+
+.modal__form-group {
+  padding: 40px;
+}
+
+.form,
+.form__field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__field {
+  position: relative;
+}
+
+.form__title {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $mainTextColor;
+
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.form__icon {
+  position: absolute;
+  top: 55%;
+  left: 14px;
+  fill: currentColor;
+  transform: translateY(-55%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .form__field:focus-within & {
+    fill: $activeLink;
+  }
+}
+
+.form__input {
+  padding-left: 42px;
+  margin-bottom: 10px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus-within {
+    border: 1px solid $activeLink;
+    border-radius: 4px;
+    outline: none;
+  }
+}
+
+.form__comment {
+  padding: 12px 16px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 20px;
+
+  &:focus-within {
+    border: 1px solid $activeLink;
+    border-radius: 4px;
+    outline: none;
+  }
+}
+
+.form__label-name {
+  margin-bottom: 4px;
+  text-align: left;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: $paragraphText;
+}
+
+.checkbox__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.checkbox__icon {
+  border-radius: 2px;
+  border: 2px solid $mainTextColor;
+  margin-right: 7px;
+
+  background-color: $whiteColor;
+
+  .checkbox__input:checked + & {
+    background-color: $activeLink;
+    border: none;
+    background-origin: border-box;
+  }
+}
+
+.checkbox__text {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $paragraphText;
+}
+
+.checkbox__link {
+  display: inline-block;
+  text-decoration: underline;
+  color: $activeLink;
+}
+
+.form__btn {
+  @extend .button;
+
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
+}
