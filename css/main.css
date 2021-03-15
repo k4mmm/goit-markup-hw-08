@@ -1135,7 +1135,6 @@ p {
             align-items: baseline;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    margin-bottom: 60px;
   }
 }
 
