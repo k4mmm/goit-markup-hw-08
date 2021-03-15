@@ -1,17 +1,130 @@
-.nav__link {
+.burger {
+  display: flex;
+  justify-content: space-between;
+}
+
+.burger__close {
+  display: none;
+}
+
+.burger__button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  fill: currentColor;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.is-open .burger__close {
+    display: block;
+  }
+
+  &.is-open .burger__menu {
+    display: none;
+  }
+
+  &:focus,
+  &:hover {
+    fill: $activeLink;
+  }
+
+  &:focus,
+  &:hover {
+    fill: $activeLink;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+    
+  }
+}
+
+.menu-container {
+  
+  
+  background-color: $whiteColor;
+  text-align: center;
+
+  transition: display 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.is-open {
+    display: block;
+  }
+
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    z-index: 2;
+    
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    margin-left: 88px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  
+    
+  
+}
+
+.nav {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+}
+
+.nav__link {
+  display: inline-block;
+  
+  padding-bottom: 8px;
   color: $mainTextColor;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
 
   &:hover,
   &:focus {
     color: $activeLink;
+  }
+
+  @media screen and (min-width: $tablet) {
+    
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.nav__list {
+  padding-bottom: 60px;
+  padding-top: 60px;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    padding: 0;
   }
 }
 
@@ -19,44 +132,82 @@
   position: relative;
 
   &:not(:last-child) {
-    margin-right: 50px;
+    margin-bottom: 40px;
+
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 0;
+      margin-right: 50px;
+            
+    }
   }
 }
 
 .contacts {
-  display: flex;
   margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    
+    margin-bottom: 0;
+    margin-left: 70px;
+    margin-right: 0;
+
+    
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    margin-left: 305px;
+      
+  }
 }
 
-.contacts__item:not(:last-child) {
-  margin-right: 50px;
+.contacts__item {
+  text-align: center;
 }
 
 .contacts__phone {
   color: $paragraphText;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  display: flex;
+
   align-items: center;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;}
 
   &:hover,
   &:focus {
     color: $activeLink;
+  
   }
+
+  
 }
 
 .contacts__mail {
   color: $paragraphText;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  display: flex;
+  margin-bottom: 16px;
   align-items: center;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    margin-right: 30px;
+  }
 
   &:hover,
   &:focus {

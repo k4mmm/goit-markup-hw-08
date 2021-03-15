@@ -1,19 +1,32 @@
 .team {
-  padding-bottom: 94px;
-  padding-top: 94px;
+  padding-bottom: 60px;
+  padding-top: 60px;
   background-color: $btnBgColor;
+
+       
+  
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 94px;
+    padding-top: 94px;
+    
+  }
 }
 
 .team__list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: -30px;
-  margin-left: -30px;
+
+  display: block;
+  justify-content: center;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .team__title {
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .member {
@@ -21,12 +34,36 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  margin-bottom: 30px;
+
+  &:nth-child(4) {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width:$tablet) {
+    margin: 15px;
+    flex-basis: calc((100% - 4 * 15px) / 2);
+  }
+
+  @media screen and (min-width:$desktop) {
+    margin: 15px;
+    flex-basis: calc((100% - 8 * 15px) / 4);
+  }
 }
 
-.members-cards {
-  margin-left: 30px;
-  margin-top: 30px;
-  flex-basis: calc(100% / 4 - 30px);
+.member__img {
+  width: 100%;
+
+  @media screen and (min-width: $tablet) {
+    width: 354px;
+        
+  }
+
+  @media screen and (min-width: $tablet) {
+   
+    width: 270px;
+  }
+
 }
 
 .member__content {
@@ -57,7 +94,8 @@
 
 .social {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
 }
 
 .social__icon {

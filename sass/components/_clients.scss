@@ -1,34 +1,50 @@
 .clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
 }
 
 .clients__title {
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .clients__list {
   display: flex;
   justify-content: space-between;
-  margin-top: -30px;
-  margin-left: -30px;
+  margin: -15px;
   flex-wrap: wrap;
 }
 
 .company {
-  flex-basis: calc(100% / 6 - 30px);
-  margin-left: 30px;
-  margin-top: 30px;
+  flex-basis: calc((100% - 4 * 15px) / 2);
+  margin: 15px;
   display: flex;
+  width: 210px;
+  height: 90px;
+
+  @media screen and (min-width: $tablet) {
+
+    flex-basis: calc((100% - 6 * 15px) / 3);
+   
+  }
+
+  @media screen and (min-width: $desktop) {
+
+    flex-basis: calc((100% - 12 * 15px) / 6);
+   
+  }
 }
 
 .company__link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
-  height: 90px;
+  width: 100%;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   fill: $paragraphText;

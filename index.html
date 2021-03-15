@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -16,41 +16,49 @@
 </head>
 
 <body>
-
-
-
     <!--навигация-->
     <header class="page-header">
-        <div class="container flex">
-            <nav class="nav flex">
-                <a class="logo" href="./index.html"><span class="logo__text">Web</span>Studio</a>
-                <ul class="nav__list flex">
-                    <li class="nav__item">
-                        <a class="nav__link current" href="./index.html">Студия</a>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="./portfolio.html">Портфолио</a>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="#footer-contacts">Контакты</a>
-                    </li>
-                </ul>
+        <div class="container ">
+            <nav class="nav ">
+                <div class="burger">
+                    <a class="logo" href="./index.html"><span class="logo__text">Web</span>Studio</a>
+                    <button type="button" class="burger__button " data-menu-button aria-expanded="false">
+                        <svg width="40" height="40" aria-level="Переключатель меню">
+                            <use class="burger__menu" href="./images/icons.svg#menu"></use>
+                            <use class="burger__close" href="./images/icons.svg#close_menu"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="menu-container " data-menu>
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a class="nav__link current" href="./index.html">Студия</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="./portfolio.html">Портфолио</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#footer-contacts">Контакты</a>
+                        </li>
+                    </ul>
+
+                    <!--контакты-->
+                    <ul class="contacts">
+                        <li class="contacts__item">
+                            <a class="contacts__mail" href="mailto:info@devstudio.com">
+                                <svg class="contacts__mail-icon">
+                                    <use href="./images/icons.svg#icon-mail-1"></use>
+                                </svg>info@devstudio.com</a>
+                        </li>
+                        <li class="contacts__item">
+                            <a class="contacts__phone" href="tel:+380961111111">
+                                <svg class="contacts__phone-icon">
+                                    <use href="./images/icons.svg#icon-smartphone"></use>
+                                </svg>+38 096 111 11 11</a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
-            <!--контакты-->
-            <ul class="contacts">
-                <li class="contacts__item">
-                    <a class="contacts__mail" href="mailto:info@devstudio.com">
-                        <svg class="contacts__mail-icon">
-                            <use href="./images/icons.svg#icon-mail-1"></use>
-                        </svg>info@devstudio.com</a>
-                </li>
-                <li class="contacts__item">
-                    <a class="contacts__phone" href="tel:+380961111111">
-                        <svg class="contacts__phone-icon">
-                            <use href="./images/icons.svg#icon-smartphone"></use>
-                        </svg>+38 096 111 11 11</a>
-                </li>
-            </ul>
         </div>
     </header>
 
@@ -58,57 +66,59 @@
 
         <!--Герой-->
         <section class="hero">
-            <h1 class="hero__title">Эффективные решения <br> для вашего бизнеса</h1>
-            <button type="button" class="hero__button" data-modal-open>Заказать услугу</button>
-            <div class="hero__backdrop is-hidden" data-modal>
-                <div class="modal">
-                    <button class="modal__close-btn" data-modal-close>
-                        <svg сlass="modal__icon" width="11" height="11">
-                            <use href="./images/icons.svg#Vector"></use>
-                        </svg>
-                    </button>
-                    <div role="group" class="modal__form-group">
-                        <form class="form" autocomplete="off">
-                            <h2 class="form__title">Оставьте свои данные, мы вам перезвоним</h2>
-                            <label class="form__field"><span class="form__label-name">Имя</span>
-                                <input class="form__input" type="text" name="userName">
-                                <svg class="form__icon" width="12" height="12">
-                                    <use href="./images/icons.svg#userform"></use>
-                                </svg>
-                            </label>
+            <div class="container hero__container">
+                <h1 class="hero__title">Эффективные решения <br> для вашего бизнеса</h1>
+                <button type="button" class="hero__button" data-modal-open>Заказать услугу</button>
+                <div class="hero__backdrop is-hidden" data-modal>
+                    <div class="modal">
+                        <button class="modal__close-btn" data-modal-close>
+                            <svg сlass="modal__icon" width="11" height="11">
+                                <use href="./images/icons.svg#Vector"></use>
+                            </svg>
+                        </button>
+                        <div role="group" class="modal__form-group">
+                            <form class="form" autocomplete="off">
+                                <h2 class="form__title">Оставьте свои данные, мы вам перезвоним</h2>
+                                <label class="form__field"><span class="form__label-name">Имя</span>
+                                    <input class="form__input" type="text" name="userName">
+                                    <svg class="form__icon" width="12" height="12">
+                                        <use href="./images/icons.svg#userform"></use>
+                                    </svg>
+                                </label>
 
-                            <label class="form__field"> <span class="form__label-name">Телефон</span>
+                                <label class="form__field"> <span class="form__label-name">Телефон</span>
 
-                                <input class="form__input" type="tel" name="telNumber">
-                                <svg class="form__icon" width="13" height="13">
-                                    <use href="./images/icons.svg#telform"></use>
-                                </svg>
-                            </label>
+                                    <input class="form__input" type="tel" name="telNumber">
+                                    <svg class="form__icon" width="13" height="13">
+                                        <use href="./images/icons.svg#telform"></use>
+                                    </svg>
+                                </label>
 
-                            <label class="form__field"><span class="form__label-name">Почта</span>
-                                <input class="form__input" type="mail" name="mail">
-                                <svg class="form__icon" width="15" height="12">
-                                    <use href="./images/icons.svg#mailform"></use>
-                                </svg>
-                            </label>
+                                <label class="form__field"><span class="form__label-name">Почта</span>
+                                    <input class="form__input" type="mail" name="mail">
+                                    <svg class="form__icon" width="15" height="12">
+                                        <use href="./images/icons.svg#mailform"></use>
+                                    </svg>
+                                </label>
 
-                            <label class="form__field"><span class="form__label-name">Комментарий</span>
-                                <textarea class="form__comment" name="comment" cols="5" rows="6"
-                                    placeholder="Введите текст"></textarea>
-                            </label>
+                                <label class="form__field"><span class="form__label-name">Комментарий</span>
+                                    <textarea class="form__comment" name="comment" cols="5" rows="6"
+                                        placeholder="Введите текст"></textarea>
+                                </label>
 
-                            <label class="checkbox">
-                                <input class="checkbox__input" type="checkbox" name="policy" value="agree">
-                                <svg class="checkbox__icon" width="16" height="15">
-                                    <use href="./images/icons.svg#icon-check"></use>
-                                </svg>
-                                <span class="checkbox__text">Соглашаюсь с рассылкой и принимаю <a class="checkbox__link"
-                                        href="http://google.com/">Условия
-                                        договора</a></span>
-                            </label>
+                                <label class="checkbox">
+                                    <input class="checkbox__input" type="checkbox" name="policy" value="agree">
+                                    <svg class="checkbox__icon" width="16" height="15">
+                                        <use href="./images/icons.svg#icon-check"></use>
+                                    </svg>
+                                    <span class="checkbox__text">Соглашаюсь с рассылкой и принимаю <a
+                                            class="checkbox__link" href="http://google.com/">Условия
+                                            договора</a></span>
+                                </label>
 
-                            <button class="form__btn" type="submit">Отправить</button>
-                        </form>
+                                <button class="form__btn" type="submit">Отправить</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -196,7 +206,7 @@
         </section>
         <!--наша команда-->
         <section class="team">
-            <div class="container">
+            <div class="container ">
                 <h2 class="team__title">Наша команда</h2>
                 <ul class="team__list">
                     <li class="members-cards">
@@ -436,60 +446,62 @@
     </main>
     <footer>
         <section class="footer">
-            <div class="container" id="footer-contacts">
-                <div class="info">
-                    <h2 class="visually-hidden">Футер</h2>
-                    <a class="logo logo__inverse" href="#"><span class="logo__text">Web</span>Studio</a>
-                    <address class="address">
-                        <ul class="address__list">
-                            <li>
-                                <p class="address__location"> г. Киев, пр-т Леси Украинки, 26</p>
+            <div class="container footer__desktop" id="footer-contacts">
+                <div class="footer__tablet">
+                    <div class="info">
+                        <h2 class="visually-hidden">Футер</h2>
+                        <a class="logo logo__inverse" href="#"><span class="logo__text">Web</span>Studio</a>
+                        <address class="address">
+                            <ul class="address__list">
+                                <li>
+                                    <p class="address__location"> г. Киев, пр-т Леси Украинки, 26</p>
+                                </li>
+                                <li>
+                                    <a class="address__mail" href="mailto:info@example.com">info@example.com</a>
+                                </li>
+                                <li>
+                                    <a class="address__phone" href="tel:+380991111111">+38 099 111 11 11</a>
+                                </li>
+                            </ul>
+                        </address>
+                    </div>
+                    <div class="join">
+                        <h2 class="join__title">Присоидиняйтесь</h2>
+                        <ul class="join__list">
+                            <li class="join__item">
+                                <a class="join__link" href="#">
+                                    <svg class="join__icon" width="20" height="20">
+                                        <use href="./images/icons.svg#icon-instagram-2">
+                                        </use>
+                                    </svg>
+                                </a>
                             </li>
-                            <li>
-                                <a class="address__mail" href="mailto:info@example.com">info@example.com</a>
+                            <li class="join__item">
+                                <a class="join__link" href="#">
+                                    <svg class="join__icon" width="20" height="20">
+                                        <use href="./images/icons.svg#icon-twitter-1">
+                                        </use>
+                                    </svg>
+                                </a>
                             </li>
-                            <li>
-                                <a class="address__phone" href="tel:+380991111111">+38 099 111 11 11</a>
+                            <li class="join__item">
+                                <a class="join__link" href="#">
+                                    <svg class="join__icon" width="20" height="20">
+                                        <use href="./images/icons.svg#icon-facebook-1">
+                                        </use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="join__item">
+                                <a class="join__link" href="#">
+                                    <svg class="join__icon" width="20" height="20">
+                                        <use href="./images/icons.svg#icon-linkedin-1">
+                                        </use>
+                                    </svg>
+                                </a>
                             </li>
                         </ul>
-                    </address>
-                </div>
-                <div class="join">
-                    <h2 class="join__title">Присоидиняйтесь</h2>
-                    <ul class="join__list">
-                        <li class="join__item">
-                            <a class="join__link" href="#">
-                                <svg class="join__icon" width="20" height="20">
-                                    <use href="./images/icons.svg#icon-instagram-2">
-                                    </use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="join__item">
-                            <a class="join__link" href="#">
-                                <svg class="join__icon" width="20" height="20">
-                                    <use href="./images/icons.svg#icon-twitter-1">
-                                    </use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="join__item">
-                            <a class="join__link" href="#">
-                                <svg class="join__icon" width="20" height="20">
-                                    <use href="./images/icons.svg#icon-facebook-1">
-                                    </use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="join__item">
-                            <a class="join__link" href="#">
-                                <svg class="join__icon" width="20" height="20">
-                                    <use href="./images/icons.svg#icon-linkedin-1">
-                                    </use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
+                    </div>
                 </div>
                 <div class="subscribe">
                     <form autocomplete="off">
@@ -511,6 +523,7 @@
 
     </footer>
     <script src="./modal.js"></script>
+    <script src="./mobile-menu.js"></script>
 </body>
 
 </html>

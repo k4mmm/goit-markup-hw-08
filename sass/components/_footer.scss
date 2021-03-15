@@ -4,7 +4,33 @@
   background-color: $heroFooterBg;
   margin-left: auto;
   margin-right: auto;
+
 }
+
+.footer__tablet {
+  display: block ;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    margin-bottom: 60px;
+  }
+
+  
+
+}
+
+.footer__desktop {
+  display: block;
+
+  @media screen and (min-width:1200px) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+  }
+
+}
+
 
 .address__location {
   color: $whiteColor;
@@ -18,11 +44,32 @@
   letter-spacing: 0.03em;
 }
 
+.address__list {
+  text-align: center;
+  @media screen and (min-width: $tablet) {
+    text-align: start
+    
+  }
+
+
+}
+
 .info {
   margin-bottom: 60px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 70px;
+    
+  }
 }
 
 .address__mail,
@@ -90,6 +137,18 @@
 
 /* SUBSCRIBE */
 
+.subscribe__form {
+  display: block;
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+  }
+  
+
+}
+
 .subscribe__icon {
   margin-left: 10px;
 }
@@ -117,7 +176,11 @@
   margin-left: auto;
   margin-right: auto;
 
-  @media screen and (min-width: 360px) {
+  @media screen and (max-width: 767px) {
     width: 100%;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 12px;
   }
 }

@@ -1,13 +1,25 @@
 .portfolio {
-  padding-bottom: 94px;
+  padding-bottom: 60px;
+  padding-top: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  
+  }
 }
 
 .portfolio__menu {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   flex-wrap: wrap;
   margin-top: -8px;
   margin-left: -8px;
+
+  @media screen and (min-width: $tablet) {
+    justify-content: center;
+    
+  }
 }
 
 .portfolio__item {
