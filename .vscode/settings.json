@@ -1,5 +1,14 @@
 {
-    "liveSassCompile.settings.formats": [
+    "scss.validate": false,
+    "css.validate": false,
+    "less.validate": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.stylelint": true
+    },
+}
+
+{
+     "liveSassCompile.settings.formats": [
         {
             "format": "expanded",
             "extensionName": ".css",
@@ -20,4 +29,9 @@
         "> 1%",
         "last 2 versions"
     ]
+
+    
+
+    
 }
+
