@@ -286,7 +286,7 @@ p {
 }
 
 .mobile-social__item:not(:last-child) {
-  margin-right: 20px;
+  margin-right: 5px;
 }
 
 .mobile-social__link {
