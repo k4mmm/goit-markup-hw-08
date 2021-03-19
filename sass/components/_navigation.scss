@@ -3,65 +3,127 @@
   justify-content: space-between;
 }
 
-.burger__close {
-  display: none;
-}
+.mobile-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 40px;
+  padding-left: 40px;
+  background-color: $whiteColor;
+  transform: translateX(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+  overflow-y: scroll;
 
-.burger__button {
-  display: inline-flex;
-  margin: 0;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  fill: currentColor;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  &.is-open .burger__close {
-    display: block;
-  }
-
-  &.is-open .burger__menu {
+  @media screen and (min-width: $tablet) {
     display: none;
   }
+}
 
-  &:focus,
-  &:hover {
+.menu-toggle {
+  margin: 10px 15px 10px 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+  &:hover,
+  &:focus {
     fill: $activeLink;
   }
 
-  &:focus,
-  &:hover {
-    fill: $activeLink;
+  &--close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
   }
 
   @media screen and (min-width: $tablet) {
     display: none;
-    
   }
 }
 
-.menu-container {
-  
-  
-  background-color: $whiteColor;
-  text-align: center;
+.mobile-container.is-open {
+  transform: translateX(0);
+}
 
-  transition: display 500ms cubic-bezier(0.4, 0, 0.2, 1);
+.mobile-menu__link {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  letter-spacing: 0.02em;
+  color: $mainTextColor;
+}
 
-  &.is-open {
-    display: block;
+.mobile-menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-menu {
+  margin-bottom: 64px;
+}
+
+.mobile-contacts {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 64px;
+
+  &__phone {
+    font-size: 34px;
+    color: $paragraphText;
+    margin-bottom: 32px;
   }
 
+  &__mail {
+    font-size: 24px;
+    color: $paragraphText;
+  }
+
+  &__phone:hover,
+  &__phone:focus {
+    color: $activeLink;
+  }
+
+  &__mail:hover,
+  &__mail:focus {
+    color: $activeLink;
+  }
+}
+
+.mobile-social {
+  display: flex;
+  justify-content: start;
+}
+
+.mobile-social__item {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+.mobile-social__link {
+  color: $activeLink;
+}
+
+.menu {
   @media screen and (max-width: 767px) {
     display: none;
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    left: 0;
-    z-index: 2;
-    
   }
 
   @media screen and (min-width: $tablet) {
@@ -75,10 +137,6 @@
     align-items: center;
     margin-left: 0;
   }
-
-  
-    
-  
 }
 
 .nav {
@@ -88,14 +146,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
   }
 }
 
 .nav__link {
   display: inline-block;
-  
-  padding-bottom: 8px;
   color: $mainTextColor;
   font-weight: 500;
   font-size: 14px;
@@ -110,7 +165,6 @@
   }
 
   @media screen and (min-width: $tablet) {
-    
     padding-top: 32px;
     padding-bottom: 32px;
   }
@@ -137,26 +191,19 @@
     @media screen and (min-width: $tablet) {
       margin-bottom: 0;
       margin-right: 50px;
-            
     }
   }
 }
 
 .contacts {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 60px;
-
   @media screen and (min-width: $tablet) {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    
+
     margin-bottom: 0;
     margin-left: 70px;
     margin-right: 0;
-
-    
   }
 
   @media screen and (min-width: $desktop) {
@@ -164,7 +211,6 @@
     justify-content: center;
     align-items: baseline;
     margin-left: 305px;
-      
   }
 }
 
@@ -183,15 +229,13 @@
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   @media screen and (min-width: $desktop) {
-    font-size: 14px;}
+    font-size: 14px;
+  }
 
   &:hover,
   &:focus {
     color: $activeLink;
-  
   }
-
-  
 }
 
 .contacts__mail {
@@ -237,4 +281,8 @@
   .contacts__phone:focus & {
     fill: $activeLink;
   }
+}
+
+.current--mobile {
+  color: $activeLink;
 }

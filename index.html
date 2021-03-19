@@ -18,18 +18,17 @@
 <body>
     <!--навигация-->
     <header class="page-header">
-        <div class="container ">
-            <nav class="nav ">
+        <div class="container">
+            <nav class="nav">
                 <div class="burger">
                     <a class="logo" href="./index.html"><span class="logo__text">Web</span>Studio</a>
-                    <button type="button" class="burger__button " data-menu-button aria-expanded="false">
-                        <svg width="40" height="40" aria-level="Переключатель меню">
-                            <use class="burger__menu" href="./images/icons.svg#menu"></use>
-                            <use class="burger__close" href="./images/icons.svg#close_menu"></use>
+                    <button type="button" class="menu-toggle js-open-menu" aria-expanded="false">
+                        <svg width="40" height="40" aria-level="Открыть меню">
+                            <use href="./images/icons.svg#menu"></use>
                         </svg>
                     </button>
                 </div>
-                <div class="menu-container " data-menu>
+                <div class="menu" data-menu>
                     <ul class="nav__list">
                         <li class="nav__item">
                             <a class="nav__link current" href="./index.html">Студия</a>
@@ -41,7 +40,6 @@
                             <a class="nav__link" href="#footer-contacts">Контакты</a>
                         </li>
                     </ul>
-
                     <!--контакты-->
                     <ul class="contacts">
                         <li class="contacts__item">
@@ -57,6 +55,33 @@
                                 </svg>+38 096 111 11 11</a>
                         </li>
                     </ul>
+                </div>
+                <div class="mobile-container js-menu-container" id="mobile-menu">
+                    <button class="menu-toggle menu-toggle--close js-close-menu">
+                        <svg width="40" height="40" aria-level="Закрыть меню">
+                            <use href="./images/icons.svg#close_menu"></use>
+                        </svg>
+                    </button>
+                    <ul class="mobile-menu">
+                        <li class="mobile-menu__item"><a href="./index.html"
+                                class="mobile-menu__link current--mobile">Студия</a></li>
+                        <li class="mobile-menu__item"><a href="./portfolio.html" class="mobile-menu__link">Портфолио</a>
+                        </li>
+                        <li class="mobile-menu__item"><a href="#footer-contacts" class="mobile-menu__link">Контакты</a>
+                        </li>
+                    </ul>
+                    <ul class="mobile-contacts">
+                        <li><a class="mobile-contacts__phone" href="tel:+380961111111">+38 096 111 11 11</a></li>
+                        <li><a class="mobile-contacts__mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                        </li>
+                    </ul>
+                    <ul class="mobile-social">
+                        <li class="mobile-social__item"><a class="mobile-social__link" href="#">Instagram </a></li>
+                        <li class="mobile-social__item"><a class="mobile-social__link" href="#">Twitter </a></li>
+                        <li class="mobile-social__item"><a class="mobile-social__link" href="#">Facebook </a></li>
+                        <li class="mobile-social__item"><a class="mobile-social__link" href="#">LinkedIn </a></li>
+                    </ul>
+
                 </div>
             </nav>
         </div>
