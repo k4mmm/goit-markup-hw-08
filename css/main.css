@@ -170,8 +170,7 @@ p {
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 48px 40px;
-  padding-left: 40px;
+  padding: 25px 15px;
   background-color: #ffffff;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
@@ -186,6 +185,12 @@ p {
 @media screen and (min-width: 768px) {
   .mobile-container {
     display: none;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .mobile-container {
+    padding: 48px 40px;
   }
 }
 
@@ -204,8 +209,15 @@ p {
 
 .menu-toggle--close {
   position: absolute;
-  top: 10px;
-  right: 15px;
+  top: 5px;
+  right: 5px;
+}
+
+@media screen and (min-width: 480px) {
+  .menu-toggle--close {
+    top: 10px;
+    right: 15px;
+  }
 }
 
 @media screen and (min-width: 768px) {
