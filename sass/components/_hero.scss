@@ -8,7 +8,7 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url("../../images/heromob.jpg");
+    url("../images/heromob.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -16,26 +16,26 @@
   @media screen and (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    background-image: url("../../images/heromob2x.jpg");
+    background-image: url("../images/heromob2x.jpg");
   }
 
   @media screen and (min-width: $tablet) {
-    background-image: url("../../images/herotab.jpg");
+    background-image: url("../images/herotab.jpg");
 
     @media screen and (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url("../../images/herotab2x.jpg");
+      background-image: url("../images/herotab2x.jpg");
     }
   }
 
   @media screen and (min-width: $desktop) {
-    background-image: url("../../images/herodesk.jpg");
+    background-image: url("../images/herodesk.jpg");
 
     @media screen and (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url("../../images/herodesk2x.jpg");
+      background-image: url("../images/herodesk2x.jpg");
     }
   }
 }
