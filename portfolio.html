@@ -88,28 +88,29 @@
     </header>
 
     <main>
-        <section class="portfolio">
+        <section class="portfolio" id="tabs-1">
             <div class="container">
                 <h1 class="visually-hidden">Portfolio</h1>
-                <ul class="portfolio__menu">
+                <ul class="portfolio__menu" data-controls>
                     <li>
-                        <button class="portfolio__item" type="button">Все</button>
+                        <button class="portfolio__item portfolio__item--active" data-type="all"
+                            type="button">Все</button>
                     </li>
                     <li>
-                        <button class="portfolio__item" type="button">Веб-сайты</button>
+                        <button class="portfolio__item" data-type="web" type="button">Веб-сайты</button>
                     </li>
                     <li>
-                        <button class="portfolio__item" type="button">Приложения</button>
+                        <button class="portfolio__item" data-type="app" type="button">Приложения</button>
                     </li>
                     <li>
-                        <button class="portfolio__item" type="button">Дизайн</button>
+                        <button class="portfolio__item" data-type="design" type="button">Дизайн</button>
                     </li>
                     <li>
-                        <button class="portfolio__item" type="button">Маркетинг</button>
+                        <button class="portfolio__item" data-type="marketing" type="button">Маркетинг</button>
                     </li>
                 </ul>
-                <ul class="card-set">
-                    <li class="card-set__item">
+                <ul class="card-set" data-cards>
+                    <li class="card-set__item " data-type="web">
                         <div class="card">
                             <a class="card_link" href="#">
                                 <div class="card__thumb">
@@ -127,7 +128,7 @@
                             </a>
                         </div>
                     </li>
-                    <li class="card-set__item">
+                    <li class="card-set__item" data-type="design">
                         <div class="card">
                             <a class="card_link" href="#">
                                 <div class="card__thumb">
@@ -145,7 +146,7 @@
                             </a>
                         </div>
                     </li>
-                    <li class="card-set__item">
+                    <li class="card-set__item" data-type="app">
                         <div class="card">
                             <a class="card_link" href="#">
                                 <div class="card__thumb">
@@ -163,7 +164,7 @@
                             </a>
                         </div>
                     </li>
-                    <li class="card-set__item">
+                    <li class="card-set__item" data-type="marketing">
                         <div class="card">
                             <a class="card_link" href="#">
                                 <div class="card__thumb">
@@ -181,7 +182,7 @@
                             </a>
                         </div>
                     </li>
-                    <li class="card-set__item">
+                    <li class="card-set__item" data-type="app">
                         <div class="card">
                             <a class="card_link" href="#">
                                 <div class="card__thumb">
@@ -199,7 +200,7 @@
                             </a>
                         </div>
                     </li>
-                    <li class="card-set__item">
+                    <li class="card-set__item" data-type="web">
                         <div class="card">
                             <a class="card_link" href="#">
                                 <div class="card__thumb">
@@ -217,7 +218,7 @@
                             </a>
                         </div>
                     </li>
-                    <li class="card-set__item">
+                    <li class="card-set__item" data-type="design">
                         <div class="card">
                             <a class="card_link" href="#">
                                 <div class="card__thumb">
@@ -235,7 +236,7 @@
                             </a>
                         </div>
                     </li>
-                    <li class="card-set__item">
+                    <li class="card-set__item" data-type="marketing">
                         <div class="card">
                             <a class="card_link" href="#">
                                 <div class="card__thumb">
@@ -253,7 +254,7 @@
                             </a>
                         </div>
                     </li>
-                    <li class="card-set__item">
+                    <li class="card-set__item" data-type="app">
                         <div class="card">
                             <a class="card_link" href="#">
                                 <div class="card__thumb">
@@ -355,6 +356,7 @@
 
     </footer>
     <script src="./mobile-menu.js"></script>
+    <script src="./plugin.js"></script>
 </body>
 
 </html>
